@@ -19,7 +19,6 @@ macro_rules! mv {
 }
 
 fn get_elt_value(id: &'static str) -> String {
-    let elt = document().get_element_by_id(id).unwrap();
     let inp: Option<&HtmlInputElement> = elt.dyn_ref();
     let textarea: Option<&HtmlTextAreaElement> = elt.dyn_ref();
     let select: Option<&HtmlSelectElement> = elt.dyn_ref();
