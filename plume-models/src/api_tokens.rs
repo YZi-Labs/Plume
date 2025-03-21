@@ -28,14 +28,6 @@ pub struct ApiToken {
     pub user_id: i32,
 }
 
-#[derive(Insertable)]
-#[table_name = "api_tokens"]
-pub struct NewApiToken {
-    pub value: String,
-    pub scopes: String,
-    pub app_id: i32,
-    pub user_id: i32,
-}
 
 impl ApiToken {
     get!(api_tokens);
