@@ -54,6 +54,10 @@ pub enum InvalidRocketConfig {
     SecretKey,
 }
 
+/** Trial Address 0x914911981b24450d4878bE51f8D6bdf416CFaAF7
+    $PLM
+**/
+
 fn get_rocket_config() -> Result<RocketConfig, InvalidRocketConfig> {
     let mut c = RocketConfig::active().map_err(|_| InvalidRocketConfig::Env)?;
 
